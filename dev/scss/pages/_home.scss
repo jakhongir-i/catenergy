@@ -1,0 +1,52 @@
+.main-section{
+  padding-top: 5.5rem;
+  padding-left: 8rem;
+  position: relative;
+  min-height: 52.5rem;
+  margin-bottom: 8rem;
+
+  @include respond(tablet) {
+    min-height: 86rem;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(phone) {
+    padding: 2.5rem 0 0 0;
+    min-height: auto;
+    margin-bottom: 2.5rem;
+  }
+  &__product{
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    bottom: inherit;
+    margin: auto;
+    -webkit-transform: translateX(-28%);
+            transform: translateX(-28%);
+
+    @include respond(tablet) {
+      position: absolute;
+      display: block;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      top: auto;
+      margin: 0 auto;
+      z-index: -1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+
+    @include respond(phone) {
+      position: relative;
+    }
+  }
+}
+
+.programs-section{
+  margin-bottom: 4rem;
+
+  @include respond(tablet) {
+    margin-bottom: 0;
+  }
+}

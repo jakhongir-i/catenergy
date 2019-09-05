@@ -1,0 +1,86 @@
+.footer{
+  background-color: $color-silver-light;
+  padding: 3rem 0;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+  &__column{
+    flex: 0 0 33.33333%;
+    padding: 0 4rem;
+
+    @include respond(phone) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__logo{
+    max-width: 13rem;
+    display: block;
+    padding: 3.5rem 0;
+
+    @include respond(phone) {
+      margin: 0 auto;
+      padding: 3rem 0;
+    }
+  }
+}
+
+.footer-row{
+  margin: 0 -4rem;
+  display: flex;
+  flex-wrap: wrap;
+  @include respond(tablet) {
+    margin: 0 -3rem;
+  }
+}
+
+.social{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 0;
+
+  @include respond(phone) {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 2.5rem 0;
+  }
+
+  &__item{
+    margin: 0 1.5rem; 
+    cursor: pointer;
+  }
+
+  &__icon{
+    fill: #666666;
+    transition: .3s;
+
+    &:hover{
+      fill: $color-primary;
+    }
+  }
+}
+
+.developer{
+  display: flex;
+  padding: 3.5rem 0;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__icon{
+    fill: #666666;
+    transition: .3s;
+
+    &:hover{
+      fill: $color-primary;
+    }
+  }
+
+  @include respond(phone) {
+    justify-content: center;
+    padding: 2.5rem 0;
+  }
+}

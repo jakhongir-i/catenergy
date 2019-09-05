@@ -1,0 +1,71 @@
+body{
+  font-family: 'Oswald', sans-serif;
+}
+
+.heading-primary{
+  max-width: 52rem;
+  text-align: left;
+  color: $color-black;
+  font-weight: 400;
+  margin-bottom: 5rem;
+
+  @include respond(phone) {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 0 0 3rem 0;
+    max-width: 100%;
+  }
+  &--main{
+    font-size: 6rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 3.3rem;
+
+    @include respond(phone) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &--sub {
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
+}
+.heading-secondary{
+  color: $color-black;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1;
+
+  @include respond(phone) {
+    font-size: 3.6rem;
+  }
+}
+
+.heading-tertiary{
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: $color-black;
+  text-transform: uppercase;
+}
+
+.heading-quaternary{
+  color: $color-black;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}

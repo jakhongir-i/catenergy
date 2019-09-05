@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html{
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+.container{
+  padding-right: 4rem;
+  padding-left: 4rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 130rem;
+  position: relative;
+
+  @include respond(tablet){
+    padding: 0 3rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
+}

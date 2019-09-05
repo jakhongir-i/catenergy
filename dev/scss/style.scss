@@ -1,0 +1,21 @@
+// libraries
+@import 'libs';
+
+// assets
+@import 'assets/vars';
+@import 'assets/mixins';
+@import 'assets/fonts';
+@import 'assets/base';
+@import 'assets/typography';
+
+// components
+@import '../components/header/header';
+@import '../components/button/button';
+@import '../components/program/program';
+@import '../components/advantage/advantage';
+@import '../components/example/example';
+@import '../components/map/map';
+@import '../components/footer/footer';
+
+// pages
+@import 'pages/home';

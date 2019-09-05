@@ -1,0 +1,10 @@
+mixin program(svgClass, img, title, text, link)
+  .programs__column
+    article.program
+      .program__img
+        svg(class='program__icon '+svgClass)
+          use(xlink:href="img/"+img)
+      h3.heading-tertiary.program__title= title
+      .program__text
+        p= text
+      a(class="program__link" href="#")= link

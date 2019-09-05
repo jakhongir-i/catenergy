@@ -1,0 +1,168 @@
+.programs {
+  display: flex;
+  margin: 0 -4rem;
+  flex-wrap: wrap;
+
+  @include respond(tablet) {
+    margin: 0 -3rem;
+  }
+
+  @include respond(phone) {
+    margin: 0 -2rem;
+  }
+  &__column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 4rem;
+
+    @include respond(tablet){
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 3rem;
+      
+      &:nth-child(1) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include respond(phone) {
+      padding: 0 2rem;
+    }
+  }
+}
+
+.program {
+  background-color: $color-silver-light;
+  padding: 8rem 5.5rem 6rem 5rem;
+  position: relative;
+
+
+  @include respond(tablet) {
+    padding: 7.7rem 31.5rem 5.8rem 5.2rem;
+  }
+
+  @include respond(phone) {
+    padding: 4rem 2rem 2.5rem ;
+  }
+  &__img {
+    width: 10rem;
+    height: 10rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    position: absolute;
+    top: 4.5rem;
+
+    @include respond(tablet) {
+      right: 60px;
+      top: 90px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @include respond(phone) {
+      width: 5rem;
+      height: 5rem;
+      top: 2.5rem;
+      left: 2.2rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    &--slim {
+      width: 70%;
+      height: 100%;
+      top: 42%;
+    }
+
+    &--pro {
+      width: 133%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    padding-left: 16.6rem;
+    margin-bottom: 7.5rem;
+
+    @include respond(tablet) {
+      padding-left: 0;
+      margin-bottom: 2.5rem;
+    }
+
+    @include respond(phone) {
+      padding-left: 7rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__text {
+    font-family: Arial;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $color-silver;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+
+    @include respond(tablet) {
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+    }
+    @include respond(phone) {
+      border-bottom: 1px solid #d3d3d3;
+      font-size: 1.4rem;
+      padding-bottom: 2.7rem;
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  &__link {
+    font-family: Oswald;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1;
+    color: $color-black;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 2.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -28px;
+      top: 50%;
+      width: 37px;
+      height: 12px;
+      background: url("../img/icon-right-arrow.svg") no-repeat center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+
+      @include respond(phone) {
+        width: 2.4rem;
+        right: -1.4rem;
+      }
+    }
+  
+    &:hover::after {
+      right: -3.5rem;
+
+      @include respond(phone) {
+        right: -2rem;
+      }
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+      
+    }
+  }
+}

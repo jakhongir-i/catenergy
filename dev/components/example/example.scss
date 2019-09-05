@@ -1,0 +1,396 @@
+.example-title{
+  margin-bottom: 7rem;
+  padding-top: 5rem;
+
+  @include respond(phone) {
+    margin-bottom: 4rem;
+    padding-top: 3.5rem;
+  }
+}
+.example{
+  position: relative;
+  
+  @include respond(tablet) {
+    border-top: 1px solid #d9d9d9;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 72%;
+    background: -webkit-gradient(linear, left top, right top, color-stop(71.8%, #f2f2f2), color-stop(28.2%, #eaeaea));
+    background: linear-gradient(to right, #f2f2f2 71.8%, #eaeaea 28.2%);
+    z-index: -2;
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+  &__wrapper{
+    max-width: 37rem;
+    @include respond(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    @include respond(phone) {
+      display: block;
+    }
+
+  }
+  &__row{
+    margin: 0 -4rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(tablet) {
+      margin: 0 -3rem;
+    }
+
+    @include respond(phone) {
+      background-color: $color-silver-light;
+    }
+  }
+
+  &__column--left{
+    flex: 0 0 40%;
+    padding: 0 4rem; 
+
+    @include respond(tablet) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 3rem;
+    }
+  }
+
+  &__text{
+    color: $color-silver;
+    font-family: "Arial";
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 5rem;
+    line-height: 2.4rem;
+    margin-top: 15rem;
+
+    @include respond(tablet) {
+      margin-top: 0;
+      margin-bottom: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+  }
+  
+  &__total{
+    color: $color-black;
+    font-size: 2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    
+    @include respond(tablet) {
+      text-align: right;
+      max-width: 18rem;
+    }
+    @include respond(phone) {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+  &__total span{
+    display: inline-block;
+    margin-right: 6.5rem;
+
+    @include respond(tablet) {
+      margin: 0;
+    }
+  }
+
+
+  // Right section 
+  &__column--right{
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    position: relative;
+
+    @include respond(tablet) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 3rem;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      height: 72%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, #f2f2f2 58%, #eaeaea 58%);
+      z-index: -1;
+
+      @include respond(tablet) {
+        background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+        height: 68%;
+      }
+    }
+  }
+}
+
+.result{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+
+  @include respond(tablet) {
+    margin-bottom: 0;
+    max-width: 36.5rem;
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 3.5rem;
+    max-width: 100%;
+  }
+  &__item{
+    border-radius: 3px;
+    border: 1px solid #cdcdcd;
+    padding: 2rem 1rem 2.2rem;
+    text-align: center;
+    max-width: 16.2rem;
+    width: 100%;
+
+    @include respond(phone) {
+      max-width: none;
+      width: auto;
+      padding: 1.5rem 1rem 1rem;
+    }
+  }
+
+  &__wrapper{
+    background-color: $color-silver-light;
+    margin-bottom: -2.6rem;
+    @include respond(tablet) {
+      background-color: #fff;
+    }
+    @include respond(phone) {
+      background-color: $color-silver-light;
+      max-width: 10.5rem;
+      padding: 0 1rem;
+    }
+  }
+
+  &__total{
+    color: $color-black;
+    font-family: Oswald;
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include respond(phone) {
+      font-size: 2.4rem;
+    }
+
+  }
+
+  &__sub{
+    color: $color-silver;
+    font-family: "Arial";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 1rem;
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 5px;
+    }
+  }
+}
+
+.comparisons{
+  position: relative;
+
+  @include respond(tablet) {
+    margin-top: 8rem;
+  }
+  @include respond(phone) {
+    margin-top: 4.5rem;
+  }
+
+  &__img{
+    display: flex;
+    position: relative;
+    height: 51rem;
+    max-width: inherit;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond(tablet) {
+      justify-content: center;
+    }
+    @include respond(phone) {
+      height: auto;
+    }
+  }
+
+  &__img--before{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    left: 5rem;
+    clip: rect(auto, 365px, auto, auto);
+    display: block;
+
+    @include respond(tablet) {
+      clip: rect(auto, 345px, auto, auto);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    @include respond(phone) {
+      position: relative;
+    }
+  }
+
+  &__img--after{
+    position: absolute;
+    bottom: 0;
+    left: 5rem;
+    clip: rect(auto, auto, auto, 365px);
+    display: block;
+    z-index: 1;
+
+    @include respond(tablet) {
+      clip: rect(auto, auto, auto, 345px);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  // =============== Range ================
+
+  &__range{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 4.3rem;
+    padding-bottom: 7rem;
+    align-items: center;
+
+    @include respond(tablet) {
+      justify-content: center;
+    }
+    @include respond(phone) {
+      padding-top: 3.5rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__progress{
+    width: 43rem;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #dcdcdc;
+    position: relative;
+
+    @include respond(phone) {
+      max-width: 8.5rem;
+      width: 100%;
+      height: 1.4rem;
+      border: 1px solid #d9d9d9;
+      border-radius: 5rem;
+      background: #ffffff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        right: 5px;
+        width: 3.5rem;
+        height: 6px;
+        border-radius: 5rem;
+        background: $color-primary;
+        transform: translateY(-50%);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &__thumb{
+    width: 3.4rem;
+    height: 3.4rem;
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all .3s;
+    &:active{
+      border: 2px solid $color-primary;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      background-color: $color-primary;
+      margin: auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  &__btn{
+    color: $color-black;
+    font-size: 2rem;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &:nth-child(1){
+      padding-right: 2rem;
+    }
+
+    &:nth-child(3){
+      padding-left: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+}
+

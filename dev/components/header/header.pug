@@ -1,0 +1,18 @@
+header(class=bgImage ? 'page-header page-header__bg' : 'page-header')
+  .container
+    .page-header__container
+      a(href="#" class="logo")
+        picture
+          source(media="(min-width: 1300px)" srcset="../img/logo-desktop.svg")
+          source(media="(min-width: 768px)" srcset="../img/logo-tablet.svg")
+          img(src="../img/logo-mobile.svg", alt="Cat Energy logo")
+      button.toggle-menu
+        span Закрыть
+      nav.navigation
+        ul.navigation__list
+          li.navigation__item
+            a.navigation__link.navigation__link--active Главная
+          li.navigation__item
+            a.navigation__link Каталог продукции
+          li.navigation__item
+            a.navigation__link Подбор программы

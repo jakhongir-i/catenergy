@@ -1,0 +1,32 @@
+.btn{
+  background-color: #68b738;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  color: $color-white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .3s;
+  line-height: 1;
+  padding: 1.6rem 2.8rem;
+
+  @include respond(phone) {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  &--small{
+    width: auto;
+    font-size: 2rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+  &:hover{
+    background-color: #5eaa2f;
+  }
+  &:active{
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

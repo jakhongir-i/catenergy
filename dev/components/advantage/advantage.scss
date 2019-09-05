@@ -1,0 +1,107 @@
+.advantages-title{
+  padding: 4rem 0 6rem 0;
+
+  @include respond(phone) {
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+.advantages{
+  margin-bottom: 1rem;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4rem;
+    counter-reset: num;
+
+    @include respond(tablet) {
+      margin: 0 -3rem;
+    }
+  }
+
+  &__item{
+    flex: 0 0 25%;
+    list-style: none;
+    padding: 0 4rem;
+    position: relative;
+    margin-bottom: 3rem;
+    min-height: 23rem;
+    // max-width: 25%;
+
+    @include respond(tablet) {
+      flex: 0 0 50%;
+      padding: 0 3rem;
+    }
+
+    @include respond(phone) {
+      flex: 0 0 100%;
+      display: flex;
+      min-height: auto;
+      align-items: center;
+    }
+
+    &::before{
+      content: "";
+      display: block;
+      height: 8rem;
+      width: 8rem;
+      background-color: $color-primary;
+      margin-bottom: 3.5rem;
+
+      background-size: 5rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+
+      @include respond(phone) {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 0;
+        margin-right: 2rem;
+      } 
+    }
+    &::after{
+      counter-increment: num;
+      content: counter(num) "";
+      position: absolute;
+      top: -38px;
+      left: 15.5rem;
+      font-size: 28rem;
+      line-height: 1;
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $color-silver-light;
+      z-index: -1;
+      
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--leaf::before{
+      background-image: url('../img/advantage-leaf@2x.png')
+    }
+    &--powder::before{
+      background-image: url('../img/advantage-powder@2x.png')
+    }
+    &--dining::before{
+      background-image: url('../img/advantage-dining@2x.png')
+    }
+    &--clock::before{
+      background-image: url('../img/advantage-clock@2x.png')
+    }
+  }
+
+
+  &__text {
+    color: $color-silver;
+    font-family: "Arial";
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 24px;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+  }
+}
